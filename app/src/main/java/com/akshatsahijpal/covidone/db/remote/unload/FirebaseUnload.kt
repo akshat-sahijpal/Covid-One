@@ -31,6 +31,8 @@ class FirebaseUnload {
                 if (myObject != null) {
                     dataSetD.add(myObject)
                 }
+                
+
                 Log.d("Check This Result->", "${i.toObject(CovidData::class.java)}")
             }
             return@async dataSetD

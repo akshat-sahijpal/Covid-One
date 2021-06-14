@@ -18,20 +18,6 @@ class CovidMedRepository @Inject constructor(
     private val db: FetchFireData,
     private val dao: RunDAO
 ) {
-
-/*    fun getCovidMedData() =
-        Pager(
-            PagingConfig(
-                pageSize = 5,
-                maxSize = 50,
-                enablePlaceholders = true
-            ),
-            pagingSourceFactory = {
-                CovidMedDataSource(db)
-            }
-        ).liveData
-*/
-
     fun getSearchResult(query: String):
             LiveData<PagingData<CovidData>> {
         GlobalScope.launch{

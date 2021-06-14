@@ -1,5 +1,7 @@
 package com.akshatsahijpal.covidone.ui.fragment.start
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +10,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.akshatsahijpal.covidone.R
 import com.akshatsahijpal.covidone.databinding.FragmentEntryBinding
+import kotlinx.android.synthetic.main.fragment_entry.*
 
 
 class EntryFragment : Fragment(R.layout.fragment_entry) {
@@ -16,6 +19,14 @@ class EntryFragment : Fragment(R.layout.fragment_entry) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        URLdet.setOnClickListener {
+            val i = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://www.who.int/emergencies/diseases/novel-coronavirus-2019")
+            )
+            startActivity(i)
+        }
 
         _binding = FragmentEntryBinding.bind(view)
         navController = Navigation.findNavController(view)

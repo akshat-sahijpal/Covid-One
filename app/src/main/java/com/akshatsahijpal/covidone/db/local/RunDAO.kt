@@ -20,6 +20,8 @@ interface RunDAO {
 
     @Query("SELECT * FROM covid_table WHERE StateCity LIKE :query AND Resource LIKE :product")
     fun getSearchResultForSupply(query: String, product: String): PagingSource<Int, CovidData>
+
     @Query("SELECT * FROM covid_table WHERE Resource LIKE :product")
     fun getDefaultData(product: String): PagingSource<Int, CovidData>
+    fun deleteDir()
 }

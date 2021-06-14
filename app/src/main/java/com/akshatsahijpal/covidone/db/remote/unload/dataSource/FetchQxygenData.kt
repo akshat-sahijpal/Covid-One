@@ -1,5 +1,6 @@
 package com.akshatsahijpal.covidone.db.remote.unload.dataSource
 
+import android.content.Context
 import android.util.Log
 import com.akshatsahijpal.covidone.data.CovidData
 import com.akshatsahijpal.covidone.db.local.RunDAO
@@ -9,6 +10,7 @@ import com.google.firebase.firestore.QuerySnapshot
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.tasks.await
+import java.io.File
 import java.lang.Exception
 import javax.inject.Inject
 
@@ -27,6 +29,8 @@ class FetchQxygenData @Inject constructor(
             null
         }
     }
+
+
     // returns the data
     suspend fun generateDataSet(): ArrayList<CovidData> {
         val st = GlobalScope.async {

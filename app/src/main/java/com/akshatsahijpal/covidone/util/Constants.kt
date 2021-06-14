@@ -6,7 +6,7 @@ object Constants {
     const val oxygenPath = "oxygenData"
     val pathToData = arrayListOf(
         "Remdesivir, Favipiravir, Fabiflu, Tocilizumab",
-        "Plasma Donor",
-        "Oxygen Kit, Cylinders, Refilling Centers"
+        "equipment /Blood/Plasma etc",
+        "dignostics, ct scan,Doctors"
     )
 }

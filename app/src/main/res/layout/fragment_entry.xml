@@ -21,7 +21,9 @@
         app:layout_constraintBottom_toTopOf="@+id/covidSuppliesBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="#B8B3B3"
+        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/covidSuppliesBtn"
@@ -30,8 +32,10 @@
         android:layout_height="103dp"
         android:layout_marginTop="162dp"
         android:layout_marginBottom="20dp"
-        android:text="@string/covid_19_black_fungus_med_supplies"
-        app:icon="@drawable/ic_baseline_medical_services_24"
+        android:backgroundTint="#D58585"
+        android:text="Medicines"
+        android:textColor="@color/black"
+        app:icon="@drawable/ic_med"
         app:layout_constraintBottom_toTopOf="@+id/plasmBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
@@ -45,8 +49,10 @@
         android:layout_height="103dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:text="@string/donate_plasma_or_find_plasma"
-        app:icon="@drawable/ic_baseline_coronavirus_24"
+        android:backgroundTint="#8BC34A"
+        android:text="equipments"
+        android:textColor="@color/black"
+        app:icon="@drawable/ic_equpt1"
         app:layout_constraintBottom_toTopOf="@+id/oxyBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
@@ -60,8 +66,12 @@
         android:layout_height="103dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="150dp"
-        android:text="@string/oxygen_centers_or_re_filling"
-        app:icon="@drawable/ic_baseline_sanitizer_24"
+        android:backgroundTint="#71C5DA"
+
+        android:text="service providers"
+        android:textColor="@color/black"
+        app:icon="@drawable/ic_doctor1"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -83,6 +93,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/URLdet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="#9C27B0"
+        android:backgroundTint="#AC1111"
+        android:text="To know more on COVID-19"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/contributeBtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
